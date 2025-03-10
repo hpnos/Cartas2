@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  background-size: cover;
+  background-image: url("images/fundo.jpg");
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1920px;
+  height: 1080px;
+  margin: 0;
+  overflow: hidden;
+}
+
+#game-container {
+  display: flex;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 200px); /* 5 colunas */
+  grid-template-rows: repeat(4, 200px); /* 4 linhas */
+  gap: 20px;
+}
+
+.card {
+  width:148px;
+  height: 207px;
+  perspective: 1000px; /* Necessário para o efeito de rotação */
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; /* Permite a rotação 3D */
+  transition: transform 0.6s ease-out; /* Faz a animação suave */
+}
+
+.card-inner.flipped {
+  transform: rotateY(180deg); /* Rotaciona corretamente */
+}
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Impede que o verso da carta seja visível quando virado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-face.front {
+
+  background-size: cover;
+  background-image: url("images/Verso.png");
+  
+}
+
+.card-face.back {
+  background-color: #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+/* Modal: Fundo e conteúdo */
+.modal {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro */
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-content {
+
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#reward-message {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#reward-image img {
+  width: 600px;
+  height: 800px;
+  object-fit: contain; /* Garante que a imagem mantenha sua proporção */
+  border-radius: 30px;
+}
+
+.close-button {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.close-button:hover {
+  color: rgb(226, 18, 226);
+}
