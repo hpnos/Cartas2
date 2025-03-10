@@ -1,6 +1,6 @@
 // Sons para cada raridade
 const sounds = {
-  "images/reward1.png": new Audio("sounds/Targaryen.mp3"),  
+  "images/reward1.png": new Audio("sounds/teste.mp3"),  
   "images/reward2.png": new Audio("sounds/Cluber.mp3"),
   "images/reward3.png": new Audio("sounds/Drestranho.mp3"),
   "images/reward4.png": new Audio("sounds/Rolf.mp3"), 
