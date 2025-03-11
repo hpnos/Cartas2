@@ -18,7 +18,7 @@ const sounds = {
   "images/reward16.png": new Audio("sounds/Sylveon.mp3"),
   "images/reward17.png": new Audio("sounds/Moira.mp3"),
   "images/reward18.png": new Audio("sounds/Feraligatr.mp3"),
-  "images/reward19.png": new Audio("sounds/sound_legendary.mp3"),
+  "images/reward19.png": new Audio("sounds/Feraligatr.mp3"),
   "images/reward20.png": new Audio("sounds/sound_legendary.mp3"),
 };
 
